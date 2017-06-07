@@ -37,7 +37,7 @@ while(1)
     isSearchedMap(searchList(r(1),2), searchList(r(1),3)) = 1; % update isSearchedMap
     searchList(r(1),:)=[];
 
-    if((node(size(node,1),3) == mapSize(1)) && (node(size(node,1),4) == mapSize(2)))
+    if((node(size(node,1),3) == goal(1)) && (node(size(node,1),4) == goal(2)))
         break;
     end
     [costmap_update, searchListNew] = updateCostMap( costmap, mapHeuristic, isSearchedMap, node(size(node,1),:));
